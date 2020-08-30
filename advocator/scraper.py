@@ -2,11 +2,14 @@ import urllib.request
 import urllib.parse
 from bs4 import BeautifulSoup
 
-# yt vids (for now)
-# handle links
-# pending list based on a user's interest
+def scrape_page(url):
+    # scarpe meta tags, images, content
+    with urllib.request.urlopen(url) as page:
+        soup = BeautifulSoup(page.read().decode('utf-8', 'html.parser'))
+        content = soup.findAll('meta')
+        for m in content:
+            print('meta: ', m)
 
-# algorithms, electrical engineering....etc. 
 
 def yt_list(query, element=None):
     """
@@ -34,7 +37,7 @@ def yt_list(query, element=None):
     url = search_url + "%s" % params
 
     with urllib.request.urlopen(url) as f:
-        soup = BeautifulSoup(f.read().decode('utf-8'), 'html.parser')
+        soup = BeautifulSoup(f.read().decode('utf-8'), 'html.parser', f)
         content = soup.findAll('a', {'class': element })
         print('content: ', content)
         for c in content:
