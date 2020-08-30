@@ -14,7 +14,8 @@ def scrape_page(url):
 
 def yt_list(query, element=None):
     """
-    Grabs list of relevant youtube vids. 
+    Grabs list of relevant youtube vids
+    from search results. 
     """
     search_url = 'https://www.youtube.com/results?'
     video_list = []
