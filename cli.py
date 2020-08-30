@@ -1,6 +1,4 @@
-from advocator.scraper import YoutubeScrape
+from advocator.scraper import yt_list
 
-yt = YoutubeScrape("Golang Tutorials")
-links = yt.links()
-
+links = yt_list("Python")
 print(links)
