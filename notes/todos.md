@@ -5,3 +5,4 @@
 - find a use and make todo list for CLI.
 - consume example sites (TBD)
 - create library API methods for client consumption (aka a developer).
+- suggested web pages

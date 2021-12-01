@@ -4,12 +4,6 @@ import urllib.request
 import urllib.parse
 from bs4 import BeautifulSoup
 
-# todos:
-# - create list based on common terms. (ie python, algorithms)
-# - loop through and and make request via duckduckgo or google.
-# - store link/page in a datastore
-# - curate content, filter and dont store duplicates.
-
 
 def parse_properties(soup, items: List[str]) -> dict:
     """
@@ -21,15 +15,15 @@ def parse_properties(soup, items: List[str]) -> dict:
     """
     tags = dict()
     for i in items:
-        prop = soup.find('meta', attrs={'property': i})
+        # TODO: pep8
+        prop = soup.find('meta', attrs={'property': i}) or soup.find('meta', attrs={'name': i})
 
-        if i is not None:
+        if prop is not None:
             tag = {i: prop['content']}
             tags.update(tag)
         else:
             print(f"meta tag {i} not found")
     return tags
-
 
 
 
@@ -49,7 +43,8 @@ def scrape_page(url):
         print(f"description: {desc['content']}")
         """
 
-        social_props = parse_properties(soup, ['og:title', 'og:image', 'og:url'])
+        # TODO: pep8 and return results
+        social_props = parse_properties(soup, ['og:title', 'og:image', 'og:url', 'title', 'description'])
         print(f"social properties: {social_props}")
 
 
