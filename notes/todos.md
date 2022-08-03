@@ -6,3 +6,6 @@
 - consume example sites (TBD)
 - create library API methods for client consumption (aka a developer).
 - suggested web pages
+
+
+Hacker news API: https://github.com/HackerNews/API
