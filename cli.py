@@ -1,8 +1,11 @@
-from advocator.scraper import yt_list, scrape_page
-
-links = yt_list("Python")
-print(links)
+import argparse
+from advocator.scraper import scoop_meta
 
 if __name__ == '__main__':
-    # scrape_page('https://hakibenita.com/postgresql-unknown-features')
-    scrape_page('https://www.django-rest-framework.org/api-guide/authentication/')
+    parser = argparse.ArgumentParser(description='processes resource data')
+    parser.add_argument('-l', '--link', action='store')
+    args = vars(parser.parse_args())
+
+    if args['link']:
+        link = args['link']
+        scoop_meta(link)
