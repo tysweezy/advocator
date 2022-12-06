@@ -2,6 +2,5 @@
 
 ## Work in progress!
 
-This package is intended to lookup youtube videos, vimeo videos, web pages etc. based on 
-a scheduler. Mostly to list store and recommend learning material for programming and 
-other related topics. 
+This project is a personal too that helps me keep track resources and look for programming 
+inspiration.
