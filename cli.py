@@ -3,6 +3,10 @@ from advocator.scraper import scoop_meta
 
 # idea for grabbing top reddit posts based on a topic
 
+# todos:
+# - read list of subreddits from a file or database
+# - loop through db and api call top list.
+
 
 def topic_reddit(subreddit):
     # loop through list of topics
