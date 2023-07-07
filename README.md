@@ -4,3 +4,9 @@
 
 This project is a personal too that helps me keep track resources and look for programming 
 inspiration.
+
+### Current TODOs
+
+* [] - Parse RSS feeds
+* [] - Parse page content
+* [] - REST API?

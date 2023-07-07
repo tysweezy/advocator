@@ -9,6 +9,8 @@ verify_ssl = true
 beautifulsoup4 = "*"
 requests = "*"
 requests-html = "*"
+pydantic = "*"
+feedparser = "*"
 
 [requires]
 python_version = "3.10"
